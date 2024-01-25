@@ -1,0 +1,139 @@
+
+    	body {
+    		background-color: #7260A3;
+    	}
+
+		.layout-grid {
+		  display: grid;
+		  grid-template-columns: repeat(2, 1fr);
+		  align-items: center;
+		}
+
+
+		.grid-text {
+		  text-align: center;
+		  padding: 40px 20px;
+		  background-color: #7260A3;
+		}
+
+		.grid-img {
+		  margin-bottom: -7px;
+		  overflow: hidden;
+		  background-color: white;
+		}
+
+		.button{
+		  border: none;
+		  color: white;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline;
+		  padding-top: 10px;
+		  margin: 4px 2px;
+		  cursor: pointer;
+		  font-size: 30px;
+		  width: 20%;
+		  background-color: white;
+		}
+
+		.button.food{
+		  width: 30%;
+		}
+
+		img {
+		  width: 100%;
+		  height: 100%;
+		  object-fit: cover;
+		}
+
+		object{
+		  width: 100%;
+		  object-fit: contain;
+		}
+
+		.ojai-mountain {
+		  display:none;
+		}
+
+		.fa {
+		  font-size: 30px;
+		  width: 30px;
+		  height: 30px;
+		  padding-top: 8px;
+		  text-align: center;
+		  text-decoration: none;
+		  border-radius: 50%;
+		}
+
+		/* Add a hover effect if you want */
+		.fa:hover {
+		  opacity: 0.7;
+		}
+
+		/* Set a specific color for each brand */
+
+		/* Facebook */
+		.fa-facebook {
+		  background: #3B5998;
+		  color: white;
+		}
+
+		/* Twitter */
+		.fa-twitter {
+		  background: #55ACEE;
+		  color: white;
+		}
+		.fa-snapchat-ghost {
+		  background: #fffc00;
+		  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		  color: white;
+		}
+
+		.fa-instagram {
+		  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+		  color: white;
+		}
+
+		.fa-google {
+		  background: #dd4b39;
+		  color: white;
+		}
+
+		.fa-linkedin {
+		  background: #007bb5;
+		  color: white;
+		}
+
+
+
+		@media screen and (max-width: 900px) {
+		.layout-grid {
+		  grid-template-columns: auto;
+		  grid-template-rows: auto auto auto auto 350px auto;
+		  grid-template-areas: 'a'
+		                       'b'
+		                       'd'
+		                       'c'
+		                       'e'
+		                       'f';
+		  background-color: #3f798d;
+		}
+
+		.ojai-mountain {
+		  display:block;
+		}
+		.ojai-oranges {
+		  display:none;
+		}
+
+		.grid-text.grid-item-c { 
+		  grid-area: c; 
+		  padding-top: 40px;
+		}
+		.grid-text.grid-item-f { 
+		  grid-area: f; 
+		  padding: 40px 20px;
+		}
+
+
+}

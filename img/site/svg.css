@@ -1,0 +1,23 @@
+@keyframes skycolor {
+  0%   {fill: #BCCBD3}
+  50%  {fill: black}
+  100% {fill: #BCCBD3}
+}
+
+@keyframes sun {
+  50%  {fill: white}
+}
+
+#skycolor.st2 {
+  animation: skycolor 15s linear infinite;
+}
+
+#sun.st0 {
+  animation: sun 15s linear infinite;
+}
+
+#sun.st1 {
+  animation: sun 15s linear infinite;
+}
+
+

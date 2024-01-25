@@ -1,0 +1,46 @@
+.header {
+	background-color: #EF8D7A;
+	height: auto;
+	text-align: center;
+	padding: 5px;
+}
+
+.nav-link {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: none;
+}
+
+#current {
+  font-weight: bold;
+  color: white;
+}
+
+
+h1, h2, h3, p {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: white;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+h1.header {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+}
