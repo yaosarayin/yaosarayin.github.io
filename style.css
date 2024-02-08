@@ -19,12 +19,20 @@
 }
 
 
-h1, h2, h3, p {
+h1, h2, h3 {
   font-family: 'Alegreya Sans SC', sans-serif;
   color: white;
   padding-left: 20%;
   padding-right: 20%;
 }
+
+p {
+  font-family: 'Alegreya Sans', sans-serif;
+  color: white;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
 
 h1.header {
   font-size: 40px;
