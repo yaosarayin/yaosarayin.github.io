@@ -9,4 +9,12 @@ the details are still up for debate, but I found some nice resources online. Eve
 <a href="https://docs.google.com/document/d/1XNAiywBtsMqfx_bYDDffa8a5CroMiOiXWpJvlzcsZB0/edit?usp=sharing">Here is a google doc where I put my not-so-flushed-out notes. </a>
 </p>
 
+Cute AI generated concept pic
+<div style="display:flex; ">
+<img style="width: 33%" src="img/concept.webp"> 
+<img style="width: 33%" src="img/cuteconcept.webp"> 
+<img style="width: 33%" src="img/realisticconcept.webp"> 
+
+</div>
+
 <p>Other 2 ideas are: electric bong + a hologram DJ</p>
