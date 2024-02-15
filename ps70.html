@@ -14,6 +14,8 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
         <title>PS70 - Home</title>
 
     </head>
@@ -35,6 +37,10 @@
 			  background-color: black;
 
 			}
+
+            .layout-grid div {
+                cursor: pointer;
+            }
 
 			.grid-img {
               height: 100%;
@@ -85,19 +91,17 @@
         </div>
 
         <div class="layout-grid" style="height: 75vh">
-            <div class="grid-img left"><a href='ps70/week1.html' target="_blank"><img
-                        src="img/week1icon.svg"></a>
+            
+            <div onclick="redirectToPage('week1')" class="grid-img left"><img
+                        src="img/week1icon.svg">
             </div>
-            <div class="grid-img middle"> <a
-                    href='ps70/week2.html'
-                    target="_blank"><img src="img/week2icon.svg"></a>
+            <div onclick="redirectToPage('week2')" class="grid-img middle"> <img src="img/week2icon.svg">
             </div>
-            <div class="grid-img left"><a href='' target="_blank"><img
-                src="img/week3icon.svg"></a>
+            <div onclick="redirectToPage('week3')" class="grid-img left">
+               <img
+                    src="img/week3icon.svg">
             </div>
-            <div class="grid-img middle"> <a
-                    href=''
-                    target="_blank"><img src="img/week4icon.svg"></a>
+            <div onclick="redirectToPage('week4')" class="grid-img middle"> <img src="img/week4icon.svg">
             </div>
             <!-- <div class="grid-img right "><a
                     href=''
@@ -127,6 +131,12 @@
          navLinks[i].id = "current";
         }
         }
+
+
+        function redirectToPage(pageName) {
+            // Redirect to another page with the specified pageName
+            window.location.href = 'ps70-template.html?page=' + pageName;
+          }
     </script>
     </body>
 </html>

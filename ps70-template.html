@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+            rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <link
+            href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <title>PS70 - Home</title>
+
+    </head>
+    <body>
+        <style type="text/css">
+
+            #header-text {
+                font-size: 40px;
+                font-weight: 800;
+              }
+
+            img, video{
+                display: block;
+                margin: 0 auto; /* This centers the image horizontally */
+                max-width:70%;
+                padding: 3%;
+              }
+              
+            #markdown-container p, 
+            #markdown-container ol,
+            #markdown-container li, 
+            #markdown-container ul {
+            font-family: 'Alegreya Sans', sans-serif;
+            color: white;
+            padding-left: 10%;
+            padding-right: 10%;  
+            font-size: 20px;
+            }
+
+    		#instruction {
+			  background-color: #EF8D7A;
+			  text-align: center;
+			  padding: 20px;
+              height: 10vh;
+
+			}
+
+			.layout-grid {
+			  background-color: black;
+              padding: 5%;
+
+			}
+			@media screen and (max-width: 637px) {
+			.layout-grid {
+			  background-color: black;
+			}
+
+
+			}
+
+    	</style>
+        <div class='header' style="height: 15vh">
+            <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+                <button class="navbar-toggler" type="button"
+                    data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="basicExampleNav">
+
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ps70.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="art.html">Art</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="research.html">Research</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <h1 id='header-text'>PS70!</h1>
+        </div>
+
+        <div class="layout-grid" style="min-height: 75vh">
+            <div id="markdown-container"></div>
+
+        </div>
+        <div id="instruction"> <h2 style="font-weight: bold;">Click on the
+                squares to explore what I did each week!</h2> </div>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script type="text/javascript">
+
+            
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if a pageName is specified in the URL
+        const params = new URLSearchParams(window.location.search);
+        const pageName = params.get('page');
+    
+        if (pageName) {
+          // Map page names to Markdown file names using an object
+          const markdownFiles = {
+            week1: 'ps70/week1.md',
+            week2: 'ps70/week2.md',
+            week3: 'ps70/week3.md'
+            // Add more mappings as needed
+          };
+    
+          // Determine the Markdown file based on the pageName using string interpolation
+          const markdownFile = markdownFiles[pageName];
+          console.log(markdownFile)
+    
+          if (markdownFile) {
+            // Fetch the Markdown content from the determined file
+            fetch(markdownFile)
+              .then(response => response.text())
+              .then(markdownContent => {
+                // Convert and render the Markdown content using Marked.js
+                var markdownContainer = document.getElementById('markdown-container');
+                markdownContainer.innerHTML = marked.parse(markdownContent);
+              })
+              .catch(error => console.error('Error fetching Markdown content:', error));
+          }
+
+          const titles = {
+            week1: 'Week 1',
+            week2: 'Week 2',
+            week3: 'Week 3'
+            // Add more mappings as needed
+          };
+
+        // Your variable that determines the text content
+        var headerText = titles[pageName];
+        console.log(headerText)
+
+        var headerTextElement = document.getElementById('header-text');
+
+
+        // Update the text content of the element
+        if (headerTextElement) {
+            headerTextElement.textContent  = headerText;
+        } else {
+        console.error('Element with ID "header-text" not found.');
+        }
+        
+
+
+        }
+
+      });
+</script>
+    </body>
+</html>

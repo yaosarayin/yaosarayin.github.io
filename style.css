@@ -26,13 +26,13 @@ h1, h2, h3 {
   padding-right: 20%;
 }
 
-p {
+p, ol,li, ul {
   font-family: 'Alegreya Sans', sans-serif;
   color: white;
   padding-left: 20%;
-  padding-right: 20%;
+  padding-right: 20%;  
+  font-size: 20px;
 }
-
 
 h1.header {
   font-size: 40px;
@@ -50,5 +50,4 @@ h3 {
 }
 
 p {
-  font-size: 20px;
 }
