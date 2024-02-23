@@ -40,12 +40,12 @@ I burnt a hole once laser cutting because I forgot to change the material settin
 Here is a video of what the gears look like inside! The connectors I printed ended up being multi-colored (pink and grey) because we ran out of filaments halfway through the print. :)
 
 <video controls>
-  <source src="../img/week3/3-1-v.mov" type="video/mp4">
+  <source src="../img/week3/3-1-v.MOV" type="video/mp4">
 </video>
 
 Here is what it looks like when packaged.
 <video controls>
-  <source src="../img/week3/3-2-v.mov" type="video/mp4">
+  <source src="../img/week3/3-2-v.MOV" type="video/mp4">
 </video>
 
 <img src="../img/week3/3-1.jpg" alt="">
