@@ -22,7 +22,7 @@ Running into wierd upload issue again... See my rant in week 7's notes. I figure
 
 Finally got my code uploaded. Ran into issues where when I include functions to turn the LED on the serial monitor doesn't output anything... When it does show the analogRead values from the photoresistor, the values seems to just wobble around and not correlate with how much light it is getting... 
 
-<img src="../img/week6/6-1.png" alt="6-2"> 
+<img src="../img/week6/6-2.png" alt="6-2"> 
 
 After a hot minute and asking Bobby I realized that this is not because the LED interferes with the serial monitor, but rather that my loop just takes along time to run because I am running all the light sequences...So the sensor reading has to wait for all the lights to finish running then read and print again. And the oscillating values is just cuz I LITERALLY CONNECTED TO THE WRONG PIN...After correcting these, it works! Silly me!
  
