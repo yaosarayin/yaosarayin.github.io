@@ -24,6 +24,10 @@ Here is the final product syncing to the amplitude of the music!
   <source src="../img/week4/4-1-v.MOV" type="video/mp4">
 </video>
 
+Here is my pinout connecting the ESP32 to the speaker, following <a href="https://www.youtube.com/watch?v=24pk28oqVQI">this Youtube video that I found</a>.
+
+<img src="../img/week4/4-2.png" alt="pinout">
+
 Here is my Arduino code:
 
 ```C
