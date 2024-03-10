@@ -4,7 +4,7 @@ I did week 6 and 7 pretty much together. You can see my final product of LED out
 
 The hardest part this week was literally trying to solder the fricking wires onto the LED strips. After 2 days of failure I decided to SWITCH SOLDERING STATIONS and wow, apparently I am not the one who's bad at soldering, it's the iron...
 
-And because I was being a bit stupid and decided to try the wires on the other end of the strip that came from the manufacturer, I accidentally FRIED my ESP32 and had to get another one. :( Now we have a Wemos LOLIN32 board, whose inout is slightly different
+And because I was being a bit stupid and decided to try the wires on the other end of the strip that came from the manufacturer, I accidentally FRIED my ESP32 and had to get another one. :( Now we have a WEMOS LOLIN32 board, whose inout is slightly different
 
 Lessons for soldering:
 - Use the SHINY irons!
