@@ -10,10 +10,12 @@ Lessons for soldering:
 - Use the SHINY irons!
 - Always solder pins onto boards with them positioned on a beardboard. Otherwise the pins may be wobbly or just slanted...
 <img src="../img/week7/goodiron.jpg" alt="goodiron"> 
+
 GOOD SOLDERING IRON (UP).
 
 <img src="../img/week7/badiron.jpg" alt="badiron"> 
-BAD SOLDERING IRON (UP)
+
+BAD SOLDERING IRON (UP).
 
 I realized that this new board is very bad and I don't like it at all (see more details on week 6's page) I ran into some prolems with connecting to the board... 
 
