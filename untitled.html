@@ -1,139 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Code Block with Copy Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        .code-block {
+            position: relative;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow-x: auto;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .code-block code {
+            display: block;
+            white-space: pre-wrap;
+            line-height: 1.5;
+            font-family: "Courier New", Courier, monospace;
+        }
+        .copy-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .copy-button:active {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
 
-    	body {
-    		background-color: #7260A3;
-    	}
+    <h1>Example Code Block with Copy Button</h1>
+    <p>This is an example of a code block with a copy button, styled like ChatGPT.</p>
+    <div class="code-block">
+        <code id="example-code">
+            #include &lt;iostream&gt;
 
-		.layout-grid {
-		  display: grid;
-		  grid-template-columns: repeat(2, 1fr);
-		  align-items: center;
-		}
+            int main() {
+                std::cout &lt;&lt; "Hello, world!" &lt;&lt; std::endl;
+                return 0;
+            }
+        </code>
+        <button class="copy-button" onclick="copyCode('example-code')">Copy</button>
+    </div>
 
+    <script>
+        function copyCode(codeElementId) {
+            const codeElement = document.getElementById(codeElementId);
+            const textArea = document.createElement("textarea");
+            textArea.value = codeElement.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            alert("Code copied to clipboard!");
+        }
+    </script>
 
-		.grid-text {
-		  text-align: center;
-		  padding: 40px 20px;
-		  background-color: #7260A3;
-		}
-
-		.grid-img {
-		  margin-bottom: -7px;
-		  overflow: hidden;
-		  background-color: white;
-		}
-
-		.button{
-		  border: none;
-		  color: white;
-		  text-align: center;
-		  text-decoration: none;
-		  display: inline;
-		  padding-top: 10px;
-		  margin: 4px 2px;
-		  cursor: pointer;
-		  font-size: 30px;
-		  width: 20%;
-		  background-color: white;
-		}
-
-		.button.food{
-		  width: 30%;
-		}
-
-		img {
-		  width: 100%;
-		  height: 100%;
-		  object-fit: cover;
-		}
-
-		object{
-		  width: 100%;
-		  object-fit: contain;
-		}
-
-		.ojai-mountain {
-		  display:none;
-		}
-
-		.fa {
-		  font-size: 30px;
-		  width: 30px;
-		  height: 30px;
-		  padding-top: 8px;
-		  text-align: center;
-		  text-decoration: none;
-		  border-radius: 50%;
-		}
-
-		/* Add a hover effect if you want */
-		.fa:hover {
-		  opacity: 0.7;
-		}
-
-		/* Set a specific color for each brand */
-
-		/* Facebook */
-		.fa-facebook {
-		  background: #3B5998;
-		  color: white;
-		}
-
-		/* Twitter */
-		.fa-twitter {
-		  background: #55ACEE;
-		  color: white;
-		}
-		.fa-snapchat-ghost {
-		  background: #fffc00;
-		  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-		  color: white;
-		}
-
-		.fa-instagram {
-		  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-		  color: white;
-		}
-
-		.fa-google {
-		  background: #dd4b39;
-		  color: white;
-		}
-
-		.fa-linkedin {
-		  background: #007bb5;
-		  color: white;
-		}
-
-
-
-		@media screen and (max-width: 900px) {
-		.layout-grid {
-		  grid-template-columns: auto;
-		  grid-template-rows: auto auto auto auto 350px auto;
-		  grid-template-areas: 'a'
-		                       'b'
-		                       'd'
-		                       'c'
-		                       'e'
-		                       'f';
-		  background-color: #3f798d;
-		}
-
-		.ojai-mountain {
-		  display:block;
-		}
-		.ojai-oranges {
-		  display:none;
-		}
-
-		.grid-text.grid-item-c { 
-		  grid-area: c; 
-		  padding-top: 40px;
-		}
-		.grid-text.grid-item-f { 
-		  grid-area: f; 
-		  padding: 40px 20px;
-		}
-
-
-}
+</body>
+</html>

@@ -10,9 +10,13 @@ For a while I literally was failing to connect to the board with my Windows comp
 A fatal error occurred: Failed to connect to ESP32: No serial data received.
 ```
 
-Fixed it after downloading the correct VCP Driver! I was following the instructions <a href="https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/">ON THIS WEBSITE</a> to set up all the neessary libraries for ESP32 on the Arduino, but it wasn't specifying what VCP driver to use. I am using a 64bit Lenovo Yoga running Windows 11. After some trial and errors we found that the one circled here is the correct driver.
 
+<div style="display: flex; align-items: center; justify-content: center; gap: 5px;">
 <img src="../img/week4/4-3.png" alt="VCP driver">
+<div>
+    Fixed it after downloading the correct VCP Driver! I was following the instructions <a href="https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/">ON THIS WEBSITE</a> to set up all the neessary libraries for ESP32 on the Arduino, but it wasn't specifying what VCP driver to use. I am using a 64bit Lenovo Yoga running Windows 11. After some trial and errors we found that the one circled here is the correct driver.
+    </div>
+</div>
 
 Then, I followed instructions on <a href="https://github.com/pschatzmann/ESP32-A2DP">THIS GITHUB OVER HERE</a> and <a href="https://www.youtube.com/watch?v=24pk28oqVQI">THIS YOUTUBE VIDEO</a> and successfully connected my phone's bluetooth to play music! The key is just to connect the wires to the correct pins. :)
 
@@ -30,7 +34,10 @@ Here is my pinout connecting the ESP32 to the speaker, following <a href="https:
 
 Here is my Arduino code:
 
-```C
+<div class="code-block-wrapper">
+<button class="copy-button" onclick="copyCode('example-code')">Copy</button>
+<code id="example-code">
+
     #include "BluetoothA2DPSink.h"
 
     #define GREEN_LED 14 // Use GPIO 14 as LED pin
@@ -91,4 +98,6 @@ Here is my Arduino code:
         }
     }
 
-```
+</code>
+</div>
+</div>

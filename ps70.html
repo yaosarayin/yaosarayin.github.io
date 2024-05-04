@@ -1,146 +1,144 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <head>
-        <link
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-            rel="stylesheet">
-        <link href="style.css" rel="stylesheet">
-        <meta charset="UTF-8">
-        <link
-            href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,800&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-        <title>PS70 - Home</title>
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-    </head>
-    <body>
-        <style type="text/css">
+    <title>PS70 - Home</title>
 
-    		#instruction {
-			  background-color: #EF8D7A;
-			  text-align: center;
-			  padding: 20px;
-			}
+</head>
 
-			.layout-grid {
-			  display: grid;
-			  grid-template-columns: repeat(4, 1fr);
-			  grid-template-rows: auto;
-			  background-color: black;
+<body>
+    <style type="text/css">
+        #instruction {
+            background-color: #EF8D7A;
+            text-align: center;
+            padding: 20px;
+        }
 
-			}
+        .layout-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            background-color: black;
 
-            .layout-grid div {
-                cursor: pointer;
+        }
+
+        .layout-grid div {
+            cursor: pointer;
+        }
+
+        .grid-img {
+            height: 100%;
+            padding: 5%;
+        }
+
+        @media screen and (max-width: 637px) {
+            .layout-grid {
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto;
+                background-color: black;
             }
 
-			.grid-img {
-              height: 100%;
-              padding:5%;
-			}
 
-			@media screen and (max-width: 637px) {
-			.layout-grid {
-			  grid-template-columns: auto;
-			  grid-template-rows: auto auto auto;
-			  background-color: black;
-			}
+        }
+    </style>
+    <div class='header' style="min-height: 15vh">
+        <nav class="navbar navbar-expand-lg navbar-dark primary-color">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="basicExampleNav">
 
-			}
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ps70.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="art.html">Art</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="research.html">Research</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1 class='header'>PS70!</h1>
+    </div>
 
-    	</style>
-        <div class='header' style="min-height: 15vh">
-            <nav class="navbar navbar-expand-lg navbar-dark primary-color">
-                <button class="navbar-toggler" type="button"
-                    data-toggle="collapse" data-target="#basicExampleNav"
-                    aria-controls="basicExampleNav" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <div class="layout-grid">
 
-                <div class="collapse navbar-collapse" id="basicExampleNav">
-
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="ps70.html">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="art.html">Art</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="research.html">Research</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <h1 class='header'>PS70!</h1>
+        <div onclick="redirectToPage('week1')" class="grid-img left"><img src="img/week1icon.svg">
         </div>
+        <div onclick="redirectToPage('week2')" class="grid-img middle"> <img src="img/week2icon.svg">
+        </div>
+        <div onclick="redirectToPage('week3')" class="grid-img left">
+            <img src="img/week3icon.svg">
+        </div>
+        <div onclick="redirectToPage('week4')" class="grid-img middle"> <img src="img/week4icon.svg">
+        </div>
+        <div onclick="redirectToPage('week5')" class="grid-img middle"> <img src="img/week5icon.svg">
+        </div>
+        <div onclick="redirectToPage('week6')" class="grid-img middle"> <img src="img/week6icon.svg">
+        </div>
+        <div onclick="redirectToPage('week7')" class="grid-img middle"> <img src="img/week7icon.svg">
 
-        <div class="layout-grid">
-            
-            <div onclick="redirectToPage('week1')" class="grid-img left"><img
-                        src="img/week1icon.svg">
-            </div>
-            <div onclick="redirectToPage('week2')" class="grid-img middle"> <img src="img/week2icon.svg">
-            </div>
-            <div onclick="redirectToPage('week3')" class="grid-img left">
-               <img
-                    src="img/week3icon.svg">
-            </div>
-            <div onclick="redirectToPage('week4')" class="grid-img middle"> <img src="img/week4icon.svg">
-            </div>
-            <div onclick="redirectToPage('week5')" class="grid-img middle"> <img src="img/week5icon.svg">
-            </div>
-            <div onclick="redirectToPage('week6')" class="grid-img middle"> <img src="img/week6icon.svg">
-            </div>
-            <div onclick="redirectToPage('week7')" class="grid-img middle"> <img src="img/week7icon.svg">
-            </div>
-            <!-- <div class="grid-img right "><a
+        </div>
+        <div onclick="redirectToPage('week8')" class="grid-img middle"> <img src="img/week8icon.svg"></div>
+        <div onclick="redirectToPage('week9')" class="grid-img middle"> <img src="img/week9icon.svg"></div>
+        <div onclick="redirectToPage('drawingMachine')" class="grid-img middle"> <img src="img/drawingMachineicon.svg">
+        </div>
+        <div onclick="redirectToPage('finalProject')" class="grid-img middle"> <img src="img/finalProjecticon.svg">
+        </div>
+        <!-- <div class="grid-img right "><a
                     href=''
                     target="_blank"><img src="img/site/telescope.svg"></a>
             </div> -->
-        </div>
-        <div id="instruction"> <h2 style="font-weight: bold;">Click on the
-                squares to explore what I did each week!</h2> </div>
+    </div>
+    <div id="instruction">
+        <h2 style="font-weight: bold;">Click on the
+            squares to explore what I did each week!</h2>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-        <script type="text/javascript">
-      var navLinks = document.getElementsByClassName("nav-link")
-      var url = "file://"+location.pathname;
-      var i=0;
-      for(i;i<navLinks.length;i++){
-        if(navLinks[i].href == url) {
-         navLinks[i].id = "current";
-        }
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        var navLinks = document.getElementsByClassName("nav-link")
+        var url = "file://" + location.pathname;
+        var i = 0;
+        for (i; i < navLinks.length; i++) {
+            if (navLinks[i].href == url) {
+                navLinks[i].id = "current";
+            }
         }
 
 
         function redirectToPage(pageName) {
             // Redirect to another page with the specified pageName
             window.location.href = 'ps70-template.html?page=' + pageName;
-          }
+        }
     </script>
-    </body>
+</body>
+
 </html>
