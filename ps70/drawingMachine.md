@@ -86,10 +86,10 @@ The initial version of the drawing machine encountered many obstacles in mobilit
 We found that the support system, comprising the four wooden blocks elevating the rods and multiple metal brackets securing them, was very ineffective due to misalignment issues. Consequently, we opted to change our design of the support system.
 
 <div style="display: flex; align-items: center; gap: 20px;">
-    <video controls width="30%">
+    <video controls width="50%">
         <source src="../img/drawingMachine/IMG_3368.mp4" type="video/mp4">
     </video>
-    <video controls width="30%">
+    <video controls width="50%">
         <source src="../img/drawingMachine/IMG_3365.mp4" type="video/mp4">
     </video>
 </div>
@@ -98,7 +98,7 @@ We retained the X-axis system as it worked perfectly with the motor. However, fo
 
 Two motors will actuate the gears, which will drive the wheels to move.
 <div style="display: flex; align-items: center; gap: 20px;">
-    <img src="../img/drawingMachine/IMG_3364.jpeg" alt="IMG_3364" width="30%">
+    <img src="../img/drawingMachine/IMG_3364.jpeg" alt="IMG_3364" width="40%">
     <video controls width="50%">
         <source src="../img/drawingMachine/IMG_9786.mp4" type="video/mp4">
 
@@ -110,10 +110,10 @@ Then we ensured the proper functionality of the original X-axis and stamp system
 
 
 <div style="display: flex; align-items: center">
-    <video controls width="30%">
+    <video controls width="50%">
         <source src="../img/drawingMachine/IMG_9819.mp4" type="video/mp4">
     </video>
-    <video controls width="30%">
+    <video controls width="50%">
         <source src="../img/drawingMachine/IMG_9822.mp4" type="video/mp4">
     </video>
 </div>
