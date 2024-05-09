@@ -1,0 +1,148 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHYSCI 70: Introduction to Digital Fabrication</title>
+    <style>
+
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+          }
+          .container-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+          }
+        
+          #textInput {
+            width: 300px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+          }
+        
+          button {
+            width: 150px;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: #ff69b4; /* Light pink */
+            color: white;
+            font-size: 16px;
+          }
+        
+          button:hover {
+            background-color: #ff1493; /* Deeper pink */
+          }
+
+          .large-button {
+            width: 300px;  /* Width of the button */
+            height: 100px;  /* Height of the button */
+            font-size: 30px;  /* Font size inside the button */
+            margin: 20px;  /* Spacing around each button */
+            background-color: #4CAF50;  /* Background color of the button */
+            color: white;  /* Text color */
+            border: none;  /* Removes the default border */
+            border-radius: 5px;  /* Rounded corners */
+            cursor: pointer;  /* Cursor appears as a pointer */
+          }
+        
+          .large-button:hover {
+            background-color: #45a049;  /* Darker shade on hover */
+          }
+      </style>
+
+
+</head>
+
+<body>
+    <div style="margin-top: 30vh; font-size: 4vh;"><h1>CONTROL MY LED DISPLAY</h1></div>
+    
+<div class="container-body">
+    <button class="large-button" id="turn-on" name="turnon">Turn On</button>
+    <button class="large-button" id="turn-off" name="turnoff">Turn Off</button>
+
+    <div>
+       <input type="text" id="textInput" placeholder="Enter your text here...">
+       <button onclick="submitText()">Submit</button>
+</div>  
+     
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyATz5qBlM8s7QxlPTBgXuIBL_HKdMakAoA",
+        authDomain: "led-matrix-e58e8.firebaseapp.com",
+        databaseURL: "https://led-matrix-e58e8-default-rtdb.firebaseio.com",
+        projectId: "led-matrix-e58e8",
+        storageBucket: "led-matrix-e58e8.appspot.com",
+        messagingSenderId: "329589309552",
+        appId: "1:329589309552:web:28564ce929a60c4ddfb4b5",
+        measurementId: "G-WQRWCS80W2"
+    };
+        // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Get a database reference to our blog
+    var ref = firebase.database().ref("/");
+
+    // make the buttons call the function below 
+    document.getElementById('turn-on').addEventListener('click', turnOn, false);
+    document.getElementById('turn-off').addEventListener('click', turnOff, false);
+
+    function turnOn(){
+        console.log("turning on");
+        ref.update({
+            "LED_STATUS": "ON"
+        });
+    }
+
+    function turnOff(){
+        console.log("turning off");
+        ref.update({
+            "LED_STATUS": "OFF"
+        });
+    }    
+
+    
+    function submitText(){
+        var strBlah = document.getElementById("textInput").value;
+        console.log("sending text");
+        console.log("strBlah");
+        ref.update({
+            "LED_STATUS": strBlah
+        });
+    }    
+
+    
+</script>
+
+</body>

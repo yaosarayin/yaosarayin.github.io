@@ -6,7 +6,7 @@ I started this assignment late so my original plan was to make stamps for our dr
 
 <div style="display: flex; flex-wrap: wrap; align-items: center;">
     <div style="flex: 1; padding: 10px;">
-        <img src="../img/week8/8-1.jpg" alt="">
+        <img src="../img/week8/8-1.jpg" alt="" width="80%">
     </div>
     <div style="flex: 2; padding: 10px;"> <p>
     I first tried to make a very small smily face stamp on the big CNC milling machine out of plywood. The result was not very satisfying. I also learned that you can't directly pour mold into wood. I wasn't too keen on trying the vacuum forming step so I decided to switch to the SRM-20 and do some milling in wax. This way I can directly pour soft material into the wax mold and make stamps that way. <a href="https://downloadcenter.rolanddg.com/contents/manuals/SRM-20_USE_EN_R4.pdf">The user's manual for the SRM-20 can be found here.</a>
@@ -24,13 +24,13 @@ Another issue I kept running into is zeroing the z-position. The drill bit canno
 
 <div style="display: flex; flex-wrap: wrap; align-items: center;">
     <div style="flex: 1; padding: 10px;">
-        <img src="../img/week8/8-2.png" alt="">
+        <img src="../img/week8/8-2.png" alt="" width="80%">
     </div>
     <div style="flex: 1; padding: 10px;">
-        <img src="../img/week8/8-5.jpg" alt="">
+        <img src="../img/week8/8-5.jpg" alt="" width="80%">
     </div>
     <div style="flex: 1; padding: 10px;">
-        <img src="../img/week8/8-3.jpg" alt="">
+        <img src="../img/week8/8-3.jpg" alt="" width="80%">
     </div>
 </div>
 
@@ -38,7 +38,7 @@ Above is the "Yao stamp" that I designed in Fusion 360 and milled successfully a
 
 <div style="display: flex; flex-wrap: wrap; align-items: center;">
     <div style="flex: 1; padding: 10px;">
-        <img src="../img/week8/8-4.jpg" alt="">
+        <img src="../img/week8/8-4.jpg" alt="" width="80%">
     </div>
 
 <div style="flex: 2; padding: 10px;"> <p>
@@ -51,13 +51,13 @@ Here are the results of how the stamps performed... I used paint here. Using a s
 
 <div style="display: flex; flex-wrap: wrap; align-items: center;">
     <div style="flex: 1; padding: 10px;">
-        <img src="../img/week8/8-6.jpg" alt="">
+        <img src="../img/week8/8-6.jpg" alt="" width="80%">
     </div>
     <div style="flex: 1; padding: 10px;">
-        <img src="../img/week8/8-7.jpg" alt="">
+        <img src="../img/week8/8-7.jpg" alt="" width="80%">
     </div>
     <div style="flex: 1; padding: 10px;">
-        <img src="../img/week8/8-8.jpg" alt="">
+        <img src="../img/week8/8-8.jpg" alt="" width="80%">
     </div>
 </div>
 
