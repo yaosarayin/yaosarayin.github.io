@@ -1,75 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!doctype html>
+<html class="no-js" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styled Code Block with Copy Button</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            color: #333;
-            padding: 20px;
-        }
-        .code-block {
-            position: relative;
-            background-color: #f7f7f7;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            overflow-x: auto;
-            padding: 10px;
-            margin: 10px 0;
-        }
-        .code-block code {
-            display: block;
-            white-space: pre-wrap;
-            line-height: 1.5;
-            font-family: "Courier New", Courier, monospace;
-        }
-        .copy-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 3px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-        .copy-button:active {
-            background-color: #0056b3;
-        }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHYSCI 70: Introduction to Digital Fabrication</title>
 </head>
+
 <body>
 
-    <h1>Example Code Block with Copy Button</h1>
-    <p>This is an example of a code block with a copy button, styled like ChatGPT.</p>
-    <div class="code-block">
-        <code id="example-code">
-            #include &lt;iostream&gt;
+     <button id="turn-on" name="turnon">Turn On</button>
+     <button id="turn-off" name="turnoff">Turn Off</button>
 
-            int main() {
-                std::cout &lt;&lt; "Hello, world!" &lt;&lt; std::endl;
-                return 0;
-            }
-        </code>
-        <button class="copy-button" onclick="copyCode('example-code')">Copy</button>
-    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
 
     <script>
-        function copyCode(codeElementId) {
-            const codeElement = document.getElementById(codeElementId);
-            const textArea = document.createElement("textarea");
-            textArea.value = codeElement.textContent;
-            document.body.appendChild(textArea);
-            textArea.select();
-            document.execCommand("copy");
-            document.body.removeChild(textArea);
-            alert("Code copied to clipboard!");
-        }
-    </script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyATz5qBlM8s7QxlPTBgXuIBL_HKdMakAoA",
+        authDomain: "led-matrix-e58e8.firebaseapp.com",
+        databaseURL: "https://led-matrix-e58e8-default-rtdb.firebaseio.com",
+        projectId: "led-matrix-e58e8",
+        storageBucket: "led-matrix-e58e8.appspot.com",
+        messagingSenderId: "329589309552",
+        appId: "1:329589309552:web:28564ce929a60c4ddfb4b5",
+        measurementId: "G-WQRWCS80W2"
+    };
+        // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+
+    // Get a database reference to our blog
+    var ref = firebase.database().ref("/");
+
+    // make the buttons call the function below 
+    document.getElementById('turn-on').addEventListener('click', turnOn, false);
+    document.getElementById('turn-off').addEventListener('click', turnOff, false);
+
+    function turnOn(){
+        console.log("turning on");
+        ref.update({
+            "LED_STATUS": "ON"
+        });
+    }
+
+    function turnOff(){
+        console.log("turning off");
+        ref.update({
+            "LED_STATUS": "OFF"
+        });
+    }    
+</script>
 
 </body>
-</html>
